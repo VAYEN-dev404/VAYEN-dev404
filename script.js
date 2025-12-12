@@ -15,12 +15,21 @@ function createSnowflake() {
 }
 setInterval(createSnowflake, 150);
 
-// Santa flying every minute
+// Santa + Reindeer flying
 function flySanta() {
   const santa = document.getElementById("santa");
-  santa.style.left = "110vw"; // fly across screen
+
+  // Move across screen
+  santa.style.left = "110vw";
+
+  // Reset after flying
   setTimeout(() => { 
-    santa.style.left = "-200px"; // reset
-  }, 5000);
+    santa.style.left = "-300px";
+  }, 8000);
 }
-setInterval(flySanta, 60000); // every 60 seconds
+
+// Start flying every 60 seconds
+setInterval(flySanta, 60000);
+
+// Fly once on page load
+flySanta();
