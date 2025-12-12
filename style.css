@@ -45,3 +45,15 @@ h1 {
   backdrop-filter: blur(5px);
   cursor: pointer;
 }
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
