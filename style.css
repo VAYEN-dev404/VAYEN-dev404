@@ -98,9 +98,9 @@ header button:hover {
 #tree {
   position: fixed;
   bottom: 50px;
-  left: 20px;
-  width: 300px;
-  z-index: 10;
+  left: 10px;
+  width: 400px;
+  z-index: 30;
 }
 
 /* Santa + Reindeer */
