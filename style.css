@@ -98,8 +98,8 @@ header button:hover {
 #tree {
   position: fixed;
   bottom: 50px;
-  left: 50px;
-  width: 120px;
+  left: 20px;
+  width: 300px;
   z-index: 10;
 }
 
