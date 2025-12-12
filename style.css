@@ -103,13 +103,23 @@ header button:hover {
   z-index: 10;
 }
 
-/* Santa */
+/* Santa + Reindeer */
 #santa {
   position: fixed;
-  top: 100px;
-  left: -200px;
-  width: 150px;
+  top: 80px;
+  left: -300px;
+  width: 200px;
   z-index: 20;
-  transition: left 5s linear;
+  transition: left 8s linear;
+}
+
+/* Optional: subtle bounce for sleigh */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+#santa {
+  animation: bounce 0.5s infinite;
 }
 
