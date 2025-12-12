@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Game Site</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Free Games Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
+  <!-- Top Menu -->
+  <nav class="top-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Snow -->
   <div id="snow"></div>
 
-  <header>
-    <h1>My Free Games Site</h1>
-    <p>Play simple, legal games — no downloads.</p>
-  </header>
+  <!-- Snow ground -->
+  <div class="snow-ground"></div>
 
-  <section class="games">
-    <div class="game-card">Game 1</div>
-    <div class="game-card">Game 2</div>
-    <div class="game-card">Game 3</div>
-  </section>
+  <!-- Christmas Tree -->
+  <img src="christmas_tree.png" id="tree" alt="Christmas Tree">
+
+  <!-- Santa -->
+  <img src="santa.png" id="santa" alt="Santa">
+
+  <!-- Main header -->
+  <header>
+    <h1>My Free Games Hub</h1>
+    <p>Legal HTML5 Games • Free • Fully Customizable</p>
+    <button onclick="window.location.href='games.html'">Play Games</button>
+  </header>
 
   <script src="script.js"></script>
 </body>
