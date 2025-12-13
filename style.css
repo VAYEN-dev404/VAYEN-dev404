@@ -105,8 +105,8 @@ header button:hover {
 /* Ginger bread */
 #ginger {
   position: fixed;
-  top: 30px;
-  rigth: 100px;
+  bottom: 30px;
+  left: -50px;
   width: 50px;
   z-index: 10;
 }
