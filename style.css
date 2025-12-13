@@ -102,23 +102,19 @@ header button:hover {
   z-index: 10;
 }
 
-/* Santa + Reindeer */
-#santa {
+/* Ginger bread */
+#ginger {
   position: fixed;
-  top: 80px;
-  left: -300px;
-  width: 200px;
-  z-index: 20;
+  top: 30px;
+  rigth: 100px;
+  width: 50px;
+  z-index: 10;
   transition: left 8s linear;
 }
 
-/* Optional: subtle bounce for sleigh */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
+
 }
 
-#santa {
-  animation: bounce 0.5s infinite;
-}
+
+
 
