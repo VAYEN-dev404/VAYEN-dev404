@@ -1,10 +1,9 @@
-/* Body */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  overflow-x: hidden;
-  background: #0e0f1a; /* optional dark background behind snow/ground */
+  overflow: hidden; /* <- prevents scrolling */
+  background: #0e0f1a; /* or keep your background image */
 }
 
 /* Top Menu */
