@@ -97,8 +97,8 @@ header button:hover {
 #tree {
   position: fixed;
   bottom: 50px; /* sits on snow ground */
-  left: 50px;
-  width: 200px; /* make bigger by increasing number */
+  left: 5px;
+  width: 400px; /* make bigger by increasing number */
   z-index: 10;
 }
 
