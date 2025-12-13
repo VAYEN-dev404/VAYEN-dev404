@@ -109,10 +109,6 @@ header button:hover {
   rigth: 100px;
   width: 50px;
   z-index: 10;
-  transition: left 8s linear;
-}
-
-
 }
 
 
