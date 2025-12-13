@@ -4,7 +4,7 @@ function createSnowflake() {
   snowflake.textContent = "❄";
 
   snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.animationDuration = (2 + Math.random() * 3) + "s"; // faster
+  snowflake.style.animationDuration = (3 + Math.random() * 4) + "s"; // faster
   snowflake.style.fontSize = (10 + Math.random() * 20) + "px"; // random size
   snowflake.style.opacity = Math.random();
 
