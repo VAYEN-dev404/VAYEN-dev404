@@ -106,7 +106,7 @@ header button:hover {
 #ginger {
   position: fixed;
   bottom: 30px;
-  left: 0px;
+  middle: 0px;
   width: 50px;
   z-index: 10;
 }
