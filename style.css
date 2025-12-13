@@ -71,14 +71,14 @@ html, body {
   width: 100%;
   z-index: 10;
 }
-
-#ginger {
-  position: fixed;
-  bottom: 35px;   /* move up slightly */
-  right: 130px;   /* move slightly to the right */
-  width: 200px;   /* smaller */
-  z-index: 120;
+  #ginger {
+  position: fixed !important;   /* force fixed positioning */
+  bottom: 40px !important;      /* vertical position */
+  right: 100px !important;      /* horizontal position from the right edge */
+  width: 200px !important;      /* smaller size */
+  z-index: 120 !important;      /* keep above ground, below snow */
 }
+
 
 /* Gingerbread House */
 #ginger {
