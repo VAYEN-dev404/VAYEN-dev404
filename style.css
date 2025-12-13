@@ -1,18 +1,22 @@
-/* Prevent scrolling and set full screen */
+/* Prevent scrolling */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* stop scrolling */
+  overflow: hidden;
   font-family: Arial, sans-serif;
-  color: white;
   background: #0e0f1a;
+}
+
+#container {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 /* Top menu */
 .top-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -43,7 +47,7 @@ html, body {
 
 /* Snow */
 #snow {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -60,40 +64,40 @@ html, body {
 }
 
 @keyframes fall {
-  to { transform: translateY(110vh); }
+  to { transform: translateY(100%); }
 }
 
 /* Snow ground */
 #ground {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 10;
 }
 
-/* Christmas Tree - fixed, do not touch */
+/* Christmas Tree */
 #tree {
-  position: fixed;
+  position: absolute;
   bottom: 50px;
   left: 5px;
   width: 400px;
   z-index: 120;
 }
 
-/* Gingerbread House - smaller and slightly left */
+/* Gingerbread House */
 #ginger {
-  position: fixed;
-  bottom: 35px;   /* slightly above snow ground */
-  right: 140px;   /* slightly left from right edge */
-  width: 220px;   /* smaller */
+  position: absolute;
+  bottom: 35px;
+  right: 140px;
+  width: 220px;
   z-index: 120;
 }
 
 /* Header / Lumi name */
 header {
-  position: fixed; /* keep header at top */
-  top: 100px;      /* controls vertical position */
+  position: absolute;
+  top: 100px;
   width: 100%;
   text-align: center;
   z-index: 160;
