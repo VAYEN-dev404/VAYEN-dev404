@@ -3,7 +3,7 @@ function createSnowflake() {
   snowflake.classList.add("snowflake");
   snowflake.textContent = "❄";
   snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.animationDuration = 4 + Math.random() * 6 + "s";
+  snowflake.style.animationDuration = 2 + Math.random() * 3 + "s";
   snowflake.style.opacity = Math.random();
 
   document.getElementById("snow").appendChild(snowflake);
