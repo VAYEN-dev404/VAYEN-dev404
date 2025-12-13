@@ -83,9 +83,9 @@ html, body {
 /* Gingerbread House */
 #ginger {
   position: fixed;
-  bottom: 110px;
-  right: 230px;
-  width: 215px;
+  bottom: 120px;
+  right: 250px;
+  width: 205px;
   z-index: 150;
 }
 
