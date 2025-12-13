@@ -72,12 +72,11 @@ html, body {
   z-index: 10;
 }
 
-/* Christmas Tree */
-#tree {
+#ginger {
   position: fixed;
-  bottom: 50px;
-  left: 5px;
-  width: 400px;
+  bottom: 35px;   /* move up slightly */
+  right: 130px;   /* move slightly to the right */
+  width: 200px;   /* smaller */
   z-index: 120;
 }
 
