@@ -1,4 +1,3 @@
-// Snowfall
 function createSnowflake() {
   const snowflake = document.createElement("div");
   snowflake.classList.add("snowflake");
@@ -13,6 +12,5 @@ function createSnowflake() {
     snowflake.remove();
   }, 10000);
 }
+
 setInterval(createSnowflake, 150);
-
-
