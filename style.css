@@ -111,6 +111,17 @@ header button:hover {
   z-index: 10;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background-image: url("snow-ground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 
