@@ -12,7 +12,7 @@ function createSnowflake() {
 
   setTimeout(() => {
     snowflake.remove();
-  }, 7000); // long enough to fall
+  }, 6000); // long enough to fall
 }
 
 // Spawn snowflake every 100ms
