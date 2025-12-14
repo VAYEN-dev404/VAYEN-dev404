@@ -8,7 +8,7 @@ html {
   height: 100%;
   overflow: hidden;
 
-  background-image: url("YOUR_BACKGROUND_IMAGE.png"); /* CHANGE THIS */
+  background-image: url("YOUR_BACKGROUND_IMAGE.png"); /* exact filename */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -176,12 +176,11 @@ header h1 {
   to   { transform: translate(-50px,-160px) scale(1.5); opacity: 0; }
 }
 
-/* ===== CHIMNEY GLOW (STRONGER) ===== */
 #chimney-glow {
   position: fixed;
-  bottom: 348px;  /* exact position */
-  right: 430px;   /* exact position */
-  width: 35px;    /* bigger size */
+  bottom: 348px; /* correct vertical */
+  right: 430px;  /* correct horizontal */
+  width: 35px;
   height: 35px;
   border-radius: 50%;
   background: radial-gradient(
@@ -192,17 +191,18 @@ header h1 {
     rgba(255,80,0,0.5) 80%,
     rgba(255,50,0,0) 100%
   );
-  animation: chimneyFlickerStrong 1s infinite alternate;
-  filter: blur(4px) brightness(2.2);
+  filter: blur(4px) brightness(2.5);
+  animation: chimneyFlicker 1s infinite alternate;
   z-index: 1000;
   pointer-events: none;
 }
 
-@keyframes chimneyFlickerStrong {
+@keyframes chimneyFlicker {
   0% { transform: scale(0.8); opacity: 0.6; }
   50% { transform: scale(1.3); opacity: 1; }
   100% { transform: scale(1); opacity: 0.7; }
 }
+
 
 
 
