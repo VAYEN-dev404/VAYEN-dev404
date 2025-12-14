@@ -25,12 +25,13 @@ function createSmoke() {
   const puff = document.createElement("div");
   puff.className = "smoke";
 
-  puff.style.left = Math.random() * 10 + "px";
+  puff.style.left = Math.random() * 8 + "px";
   puff.style.animationDuration = (3 + Math.random() * 2) + "s";
 
   document.getElementById("smoke").appendChild(puff);
 
-  setTimeout(() => puff.remove(), 5000);
+  setTimeout(() => puff.remove(), 6000);
 }
 
-setInterval(createSmoke, 800);
+setInterval(createSmoke, 700);
+
