@@ -21,7 +21,6 @@ setInterval(createSnowflake, 90);
 function createSmoke() {
   const puff = document.createElement("div");
   puff.className = "smoke";
-
   puff.style.left = Math.random() * 8 + "px";
   puff.style.animationDuration = (3 + Math.random() * 2) + "s";
 
