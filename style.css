@@ -186,7 +186,47 @@ header h1 {
     transform: translate(-50px, -160px) scale(1.5);
     opacity: 0;
   }
+
+  /* 🔥 Chimney Glow */
+#chimney-glow {
+  position: fixed;
+
+  /* MATCH THESE TO SMOKE POSITION */
+  bottom: 348px;   /* same vertical as smoke */
+  right: 430px;    /* same horizontal as smoke */
+
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,180,80,1) 0%,
+    rgba(255,120,40,0.9) 40%,
+    rgba(255,80,0,0.4) 70%,
+    rgba(255,80,0,0) 100%
+  );
+
+  animation: chimneyFlicker 1.6s infinite alternate;
+  filter: blur(1px);
+  z-index: 998;
+  pointer-events: none;
 }
+
+@keyframes chimneyFlicker {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+
 
 
 
