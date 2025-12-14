@@ -1,3 +1,4 @@
+/* ===== HARD PAGE LOCK (NO MOVEMENT) ===== */
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,11 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  background-image: url("YOUR_BACKGROUND_IMAGE.png"); /* CHANGE THIS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -14,11 +20,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: fixed;   /* 🔥 THIS IS THE K*
+  font-family: Arial, sans-serif;
+  color: white;
+}
 
-
-
-/* TOP MENU */
+/* ===== TOP MENU ===== */
 .top-menu {
   position: fixed;
   top: 0;
@@ -44,13 +50,19 @@ body {
   font-weight: bold;
 }
 
+/* ===== TITLE ===== */
+header {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  text-align: center;
+  z-index: 250;
+}
+
 header h1 {
   font-size: 3rem;
-  color: white;
   margin: 0;
-
   animation: lumiGlow 2.8s ease-in-out infinite;
-
   text-shadow:
     0 0 10px rgba(255,255,255,0.7),
     0 0 20px rgba(200,230,255,0.9),
@@ -76,8 +88,11 @@ header h1 {
       0 0 14px rgba(180,220,255,0.6),
       0 0 28px rgba(180,220,255,0.8);
   }
+}
 
+/* ===== SNOW ===== */
 #snow {
+  position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 500;
@@ -89,12 +104,6 @@ header h1 {
   animation: fall linear forwards;
 }
 
-@keyframes fall {
-  from { transform: translateY(0); }
-  to   { transform: translateY(110vh); }
-}
-
-/* Sparkle snow */
 .snowflake.sparkle {
   animation:
     fall linear forwards,
@@ -105,8 +114,8 @@ header h1 {
 }
 
 @keyframes fall {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100vh); }
+  from { transform: translateY(0); }
+  to { transform: translateY(110vh); }
 }
 
 @keyframes sparkle {
@@ -115,28 +124,13 @@ header h1 {
   100% { opacity: 0.4; filter: brightness(1); }
 }
 
-/* CHRISTMAS TREE */
+/* ===== CHRISTMAS TREE (YOUR POSITION) ===== */
 #tree {
   position: fixed;
   bottom: 40px;
   left: 20px;
   width: 380px;
   z-index: 150;
-}
-
-#ginger {
-  position: fixed;
-  bottom: 165px;
-  right: 280px;
-
-  width: 195px;        /* ✅ controlled size */
-  height: auto;        /* prevents distortion */
-
-  z-index: 150;
-}
-
-/* Tree sparkle */
-#tree {
   animation: treeSparkle 2.5s ease-in-out infinite;
 }
 
@@ -150,19 +144,29 @@ header h1 {
   100% {
     filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
   }
+}
 
-/* Smoke container (chimney) */
+/* ===== GINGERBREAD (YOUR POSITION) ===== */
+#ginger {
+  position: fixed;
+  bottom: 165px;
+  right: 280px;
+  width: 195px;
+  height: auto;
+  z-index: 150;
+}
+
+/* ===== SMOKE ===== */
 #smoke {
   position: fixed;
-  bottom: 120px;   /* adjust slightly if needed */
-  right: 310px;    /* lines up with chimney */
+  bottom: 265px;
+  right: 315px;
   width: 10px;
   height: 10px;
   z-index: 999;
   pointer-events: none;
 }
 
-/* Smoke puff */
 .smoke {
   position: absolute;
   width: 22px;
@@ -170,16 +174,15 @@ header h1 {
   background: rgba(255,255,255,0.65);
   border-radius: 50%;
   filter: blur(3px);
-
   animation: smokeRise 4s ease-out forwards;
 }
 
 @keyframes smokeRise {
-  0% {
+  from {
     transform: translate(0, 0) scale(0.6);
     opacity: 0.7;
   }
-  100% {
+  to {
     transform: translate(-50px, -160px) scale(1.5);
     opacity: 0;
   }
