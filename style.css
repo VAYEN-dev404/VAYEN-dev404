@@ -117,7 +117,7 @@ header h1 {
 /* ===== SMOKE ===== */
 #smoke {
   position: fixed;
-  bottom: 285px;
+  bottom: 360px;
   right: 430px;
   z-index: 900;
 }
@@ -142,7 +142,7 @@ header h1 {
 /* ===== CHIMNEY GLOW ===== */
 #chimney-glow {
   position: fixed;
-  bottom: 348px;
+  bottom: 325px;
   right: 410px; /* moved right */
   width: 35px;
   height: 35px;
