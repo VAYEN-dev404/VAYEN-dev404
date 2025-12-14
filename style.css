@@ -1,3 +1,4 @@
+/* FULL SCREEN, NO SCROLL */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@ html, body {
   overflow: hidden;
   font-family: Arial, sans-serif;
 
-  background-image: url("snow-ground.png"); /* 👈 CHANGE THIS */
+  background-image: url("your-background.png"); /* replace with your background */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +68,7 @@ header h1 {
   animation: fall linear forwards;
 }
 
-/* Sparkling snowflakes */
+/* Sparkle snow */
 .snowflake.sparkle {
   animation:
     fall linear forwards,
@@ -77,19 +78,16 @@ header h1 {
     0 0 12px rgba(200,230,255,0.9);
 }
 
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
 @keyframes sparkle {
-  0% {
-    opacity: 0.4;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 1;
-    filter: brightness(3);
-  }
-  100% {
-    opacity: 0.4;
-    filter: brightness(1);
-  }
+  0% { opacity: 0.4; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(3); }
+  100% { opacity: 0.4; filter: brightness(1); }
+}
 
 /* CHRISTMAS TREE */
 #tree {
@@ -103,7 +101,7 @@ header h1 {
 /* GINGERBREAD HOUSE */
 #ginger {
   position: fixed;
-  bottom: 150px;
+  bottom: 165px;
   right: 280px;
   width: 195px;
   z-index: 150;
