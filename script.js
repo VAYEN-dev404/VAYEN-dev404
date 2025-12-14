@@ -7,7 +7,7 @@ function createSnowflake() {
   snowflake.style.left = Math.random() * 100 + "vw";
   snowflake.style.fontSize = (12 + Math.random() * 18) + "px";
   snowflake.style.opacity = Math.random();
-  snowflake.style.animationDuration = (2 + Math.random() * 3) + "s";
+  snowflake.style.animationDuration = (4 + Math.random() * 5) + "s";
 
   if (Math.random() < 0.4) {
     snowflake.classList.add("sparkle");
@@ -25,7 +25,7 @@ function createSmoke() {
   puff.className = "smoke";
 
   puff.style.left = Math.random() * 8 + "px";
-  puff.style.animationDuration = (4 + Math.random() * 5) + "s";
+  puff.style.animationDuration = (3 + Math.random() * 2) + "s";
 
   document.getElementById("smoke").appendChild(puff);
   setTimeout(() => puff.remove(), 6000);
