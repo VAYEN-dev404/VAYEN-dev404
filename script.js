@@ -30,3 +30,4 @@ function createSnowflake() {
 
 // Create snow constantly
 setInterval(createSnowflake, 90);
+
