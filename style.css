@@ -159,8 +159,8 @@ header h1 {
 /* ===== SMOKE ===== */
 #smoke {
   position: fixed;
-  bottom: 350px;
-  right: 400px;
+  bottom: 320px;
+  right: 420px;
   width: 10px;
   height: 10px;
   z-index: 999;
