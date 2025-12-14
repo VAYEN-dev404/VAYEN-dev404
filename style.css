@@ -39,20 +39,39 @@ html, body {
   font-weight: bold;
 }
 
-/* TITLE */
-header {
-  position: fixed;
-  top: 90px;
-  width: 100%;
-  text-align: center;
-  z-index: 250;
-}
-
 header h1 {
-  margin: 0;
   font-size: 3rem;
   color: white;
+  margin: 0;
+
+  animation: lumiGlow 2.8s ease-in-out infinite;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.7),
+    0 0 20px rgba(200,230,255,0.9),
+    0 0 40px rgba(180,220,255,1);
 }
+
+@keyframes lumiGlow {
+  0% {
+    text-shadow:
+      0 0 6px rgba(255,255,255,0.4),
+      0 0 14px rgba(180,220,255,0.6),
+      0 0 28px rgba(180,220,255,0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(255,255,255,1),
+      0 0 28px rgba(200,240,255,1),
+      0 0 56px rgba(200,240,255,1);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(255,255,255,0.4),
+      0 0 14px rgba(180,220,255,0.6),
+      0 0 28px rgba(180,220,255,0.8);
+  }
+
 
 /* SNOW */
 #snow {
@@ -123,65 +142,38 @@ header h1 {
     filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
   }
 
-/* Smoke container */
+/* Smoke container (chimney) */
 #smoke {
   position: fixed;
-  bottom: 150px; /* adjust to line up with chimney */
-  right: 300px;  /* adjust horizontally */
+  bottom: 120px;   /* adjust slightly if needed */
+  right: 310px;    /* lines up with chimney */
   width: 10px;
   height: 10px;
-  z-index: 200;
+  z-index: 999;
   pointer-events: none;
 }
 
 /* Smoke puff */
 .smoke {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: rgba(255,255,255,0.6);
+  width: 22px;
+  height: 22px;
+  background: rgba(255,255,255,0.65);
   border-radius: 50%;
+  filter: blur(3px);
+
   animation: smokeRise 4s ease-out forwards;
-  filter: blur(2px);
 }
 
 @keyframes smokeRise {
   0% {
     transform: translate(0, 0) scale(0.6);
-    opacity: 0.6;
+    opacity: 0.7;
   }
   100% {
-    transform: translate(-40px, -120px) scale(1.4);
+    transform: translate(-50px, -160px) scale(1.5);
     opacity: 0;
   }
 
-/* Lumi glowing title */
-header h1 {
-  font-size: 3rem;
-  color: white;
-  animation: lumiGlow 2.5s ease-in-out infinite;
-  text-shadow:
-    0 0 8px rgba(255,255,255,0.6),
-    0 0 16px rgba(200,230,255,0.8),
-    0 0 32px rgba(180,220,255,1);
-}
 
-@keyframes lumiGlow {
-  0% {
-    text-shadow:
-      0 0 6px rgba(255,255,255,0.4),
-      0 0 12px rgba(180,220,255,0.6),
-      0 0 24px rgba(180,220,255,0.8);
-  }
-  50% {
-    text-shadow:
-      0 0 12px rgba(255,255,255,0.9),
-      0 0 24px rgba(200,240,255,1),
-      0 0 48px rgba(200,240,255,1);
-  }
-  100% {
-    text-shadow:
-      0 0 6px rgba(255,255,255,0.4),
-      0 0 12px rgba(180,220,255,0.6),
-      0 0 24px rgba(180,220,255,0.8);
-  }
+
