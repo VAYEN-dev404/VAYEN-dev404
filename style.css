@@ -107,3 +107,18 @@ header h1 {
   z-index: 150;
 }
 
+/* Tree sparkle */
+#tree {
+  animation: treeSparkle 2.5s ease-in-out infinite;
+}
+
+@keyframes treeSparkle {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
+  }
+  50% {
+    filter: brightness(1.4) drop-shadow(0 0 14px rgba(255,255,255,0.9));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
+  }
