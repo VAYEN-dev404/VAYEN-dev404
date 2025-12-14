@@ -67,22 +67,29 @@ header h1 {
   animation: fall linear forwards;
 }
 
-/* Sparkle snow */
+/* Sparkling snowflakes */
 .snowflake.sparkle {
   animation:
     fall linear forwards,
-    twinkle 1.5s ease-in-out infinite;
+    sparkle 1.2s ease-in-out infinite;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.8),
+    0 0 12px rgba(200,230,255,0.9);
 }
 
-@keyframes fall {
-  to { transform: translateY(100vh); }
-}
-
-@keyframes twinkle {
-  0% { opacity: 0.4; filter: brightness(1); }
-  50% { opacity: 1; filter: brightness(2); }
-  100% { opacity: 0.4; filter: brightness(1); }
-}
+@keyframes sparkle {
+  0% {
+    opacity: 0.4;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(3);
+  }
+  100% {
+    opacity: 0.4;
+    filter: brightness(1);
+  }
 
 /* CHRISTMAS TREE */
 #tree {
