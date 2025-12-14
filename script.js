@@ -7,11 +7,9 @@ function createSnowflake() {
   snowflake.style.left = Math.random() * 100 + "vw";
   snowflake.style.fontSize = (12 + Math.random() * 18) + "px";
   snowflake.style.opacity = Math.random();
-  snowflake.style.animationDuration = (4 + Math.random() * 5) + "s";
+  snowflake.style.animationDuration = (2 + Math.random() * 3) + "s";
 
-  if (Math.random() < 0.4) {
-    snowflake.classList.add("sparkle");
-  }
+  if (Math.random() < 0.4) snowflake.classList.add("sparkle");
 
   document.getElementById("snow").appendChild(snowflake);
   setTimeout(() => snowflake.remove(), 8000);
