@@ -1,4 +1,4 @@
-/* ===== HARD PAGE LOCK (NO MOVEMENT) ===== */
+/* ===== HARD PAGE LOCK ===== */
 * {
   box-sizing: border-box;
 }
@@ -8,7 +8,7 @@ html {
   height: 100%;
   overflow: hidden;
 
-  background-image: url("snow-ground.png"); /* CHANGE THIS */
+  background-image: url("YOUR_BACKGROUND_IMAGE.png"); /* CHANGE THIS */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,7 +124,7 @@ header h1 {
   100% { opacity: 0.4; filter: brightness(1); }
 }
 
-/* ===== CHRISTMAS TREE (YOUR POSITION) ===== */
+/* ===== CHRISTMAS TREE ===== */
 #tree {
   position: fixed;
   bottom: 40px;
@@ -135,18 +135,12 @@ header h1 {
 }
 
 @keyframes treeSparkle {
-  0% {
-    filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
-  }
-  50% {
-    filter: brightness(1.4) drop-shadow(0 0 14px rgba(255,255,255,0.9));
-  }
-  100% {
-    filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
-  }
+  0% { filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4)); }
+  50% { filter: brightness(1.4) drop-shadow(0 0 14px rgba(255,255,255,0.9)); }
+  100% { filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4)); }
 }
 
-/* ===== GINGERBREAD (YOUR POSITION) ===== */
+/* ===== GINGERBREAD ===== */
 #ginger {
   position: fixed;
   bottom: 165px;
@@ -159,8 +153,8 @@ header h1 {
 /* ===== SMOKE ===== */
 #smoke {
   position: fixed;
-  bottom: 350px;
-  right: 430px;
+  bottom: 285px; /* match chimney */
+  right: 430px;  /* match chimney */
   width: 10px;
   height: 10px;
   z-index: 999;
@@ -178,55 +172,30 @@ header h1 {
 }
 
 @keyframes smokeRise {
-  from {
-    transform: translate(0, 0) scale(0.6);
-    opacity: 0.7;
-  }
-  to {
-    transform: translate(-50px, -160px) scale(1.5);
-    opacity: 0;
-  }
+  from { transform: translate(0,0) scale(0.6); opacity: 0.7; }
+  to   { transform: translate(-50px,-160px) scale(1.5); opacity: 0; }
+}
 
-  /* 🔥 Chimney Glow */
+/* ===== CHIMNEY GLOW ===== */
 #chimney-glow {
   position: fixed;
-
-  /* MATCH THESE TO SMOKE POSITION */
-  bottom: 348px;   /* same vertical as smoke */
-  right: 430px;    /* same horizontal as smoke */
-
-  width: 12px;
-  height: 12px;
+  bottom: 348px;  /* your requested */
+  right: 430px;   /* your requested */
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-
-  background: radial-gradient(
-    circle,
-    rgba(255,180,80,1) 0%,
-    rgba(255,120,40,0.9) 40%,
-    rgba(255,80,0,0.4) 70%,
-    rgba(255,80,0,0) 100%
-  );
-
-  animation: chimneyFlicker 1.6s infinite alternate;
-  filter: blur(1px);
-  z-index: 998;
+  background: radial-gradient(circle, rgba(255,180,80,1) 0%, rgba(255,120,40,0.9) 40%, rgba(255,80,0,0.6) 70%, rgba(255,80,0,0) 100%);
+  animation: chimneyFlicker 1.2s infinite alternate;
+  filter: blur(2px);
+  z-index: 1000;
   pointer-events: none;
 }
 
 @keyframes chimneyFlicker {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 0.7;
-  }
-
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
 
 
 
