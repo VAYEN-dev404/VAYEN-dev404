@@ -103,3 +103,16 @@ header h1 {
   margin: 0;
 }
 
+/* Sparkle snowflakes */
+.snowflake.sparkle {
+  animation:
+    fall linear forwards,
+    twinkle 1.5s ease-in-out infinite;
+}
+
+/* Twinkle effect */
+@keyframes twinkle {
+  0%   { opacity: 0.4; filter: brightness(1); }
+  50%  { opacity: 1;   filter: brightness(1.8); }
+  100% { opacity: 0.4; filter: brightness(1); }
+}
