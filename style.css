@@ -122,3 +122,35 @@ header h1 {
   100% {
     filter: brightness(1) drop-shadow(0 0 4px rgba(255,255,255,0.4));
   }
+
+/* Smoke container */
+#smoke {
+  position: fixed;
+  bottom: 150px; /* adjust to line up with chimney */
+  right: 300px;  /* adjust horizontally */
+  width: 10px;
+  height: 10px;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* Smoke puff */
+.smoke {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  animation: smokeRise 4s ease-out forwards;
+  filter: blur(2px);
+}
+
+@keyframes smokeRise {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-40px, -120px) scale(1.4);
+    opacity: 0;
+  }
