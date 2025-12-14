@@ -17,4 +17,3 @@ setInterval(() => {
   document.getElementById("smoke").appendChild(puff);
   setTimeout(() => puff.remove(), 5000);
 }, 700);
-
