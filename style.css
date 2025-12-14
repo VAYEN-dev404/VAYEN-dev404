@@ -6,7 +6,7 @@ html, body {
   height: 100%;
   overflow: hidden;
 
-  background-image: url("snow-ground"); /* ← CHANGE THIS */
+  background-image: url("snow-ground.png"); /* ← CHANGE THIS */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -157,7 +157,6 @@ header h1 {
   from { transform: scale(.85); opacity: .6; }
   to   { transform: scale(1.3); opacity: 1; }
 }
-
 
 
 
