@@ -3,17 +3,30 @@ function createSnowflake() {
   snowflake.classList.add("snowflake");
   snowflake.textContent = "❄";
 
+  // Random position
   snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.animationDuration = (4 + Math.random() * 5) + "s"; // faster
-  snowflake.style.fontSize = (10 + Math.random() * 20) + "px"; // random size
+
+  // Faster fall
+  snowflake.style.animationDuration = (2 + Math.random() * 3) + "s";
+
+  // Random size
+  snowflake.style.fontSize = (10 + Math.random() * 18) + "px";
+
+  // Random opacity
   snowflake.style.opacity = Math.random();
+
+  // ✨ 30% chance to sparkle
+  if (Math.random() < 0.3) {
+    snowflake.classList.add("sparkle");
+  }
 
   document.getElementById("snow").appendChild(snowflake);
 
+  // Remove after fall
   setTimeout(() => {
     snowflake.remove();
-  }, 6000); // long enough to fall
+  }, 7000);
 }
 
-// Spawn snowflake every 100ms
-setInterval(createSnowflake, 100);
+// Create snow constantly
+setInterval(createSnowflake, 90);
