@@ -8,7 +8,7 @@ html {
   height: 100%;
   overflow: hidden;
 
-  background-image: url("YOUR_BACKGROUND_IMAGE.png"); /* CHANGE THIS */
+  background-image: url("snow-ground.png"); /* CHANGE THIS */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
