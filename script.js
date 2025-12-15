@@ -7,7 +7,7 @@ setInterval(() => {
   s.style.fontSize = 12 + Math.random() * 18 + "px";
   s.style.animationDuration = 3 + Math.random() * 3 + "s";
   document.getElementById("snow").appendChild(s);
-  setTimeout(() => s.remove(), 8000);
+  setTimeout(() => s.remove(), 6000);
 }, 90);
 
 /* SMOKE */
